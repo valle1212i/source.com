@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Startup</title>
+  <style>
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Header section */
+    header {
+      background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeIn 3s ease-out;
+      border-bottom: 2px solid #fff;
+    }
+
+    header h1 {
+      font-size: 4em;
+      margin: 0;
+      letter-spacing: 4px;
+      color: #fff;
+      text-transform: uppercase;
+      animation: slideIn 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 3s ease-out 1s forwards;
+      color: #e4e4e4;
+    }
+
+    /* Main content section */
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: #1a1a1a;
+      animation: slideUp 2s ease-out;
+    }
+
+    .content {
+      text-align: center;
+      animation: fadeIn 2s ease-out 2s forwards;
+    }
+
+    .content h2 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      animation: bounceIn 1.5s ease-out;
+      color: #00d2ff;
+    }
+
+    .content p {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      color: #bdbdbd;
+    }
+
+    /* E-handel Sektion */
+    .ecommerce-section {
+      background-color: #f7f7f7;
+      color: #121212;
+      padding: 80px 20px;
+    }
+
+    .ecommerce-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .image-side {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .image-side img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .text-side {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .text-side .label {
+      font-size: 0.9em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .text-side .headline {
+      font-size: 2.8em;
+      margin: 0 0 15px;
+      font-weight: 600;
+    }
+
+    .text-side .description {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .text-side .cta-button {
+      background-color: #00d2ff;
+      color: #121212;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .text-side .cta-button:hover {
+      background-color: #00a8cc;
+    }
+
+    /* Extra Section */
+    .extra-section {
+      background-color: #333;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .extra-section h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .extra-section p {
+      font-size: 1.2em;
+      color: #bdbdbd;
+      margin-bottom: 40px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #121212;
+      color: #e4e4e4;
+      text-align: center;
+      padding: 20px;
+      font-size: 1em;
+      border-top: 2px solid #fff;
+      animation: fadeIn 2s ease-out 3s forwards;
+    }
+
+    /* Animation Effects */
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: translateY(-100px);
+      }
+      50% {
+        transform: translateY(25px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      .content h2 {
+        font-size: 2.2em;
+      }
+
+      .content p {
+        font-size: 1.1em;
+      }
+
+      .cta-button {
+        font-size: 1em;
+      }
+
+      .ecommerce-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-side,
+      .text-side {
+        max-width: 100%;
+      }
+
+      .text-side .headline {
+        font-size: 2.2em;
+      }
+
+      .text-side .description {
+        font-size: 1em;
+      }
+
+      .image-side img {
+        max-height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Välkommen till vår Tech Startup!</h1>
+    <p>Vi är experter på att skapa innovativa teknologilösningar.</p>
+  </header>
+
+  <section class="main-section">
+    <div class="content">
+      <h2>Bygg framtidens teknologi med oss!</h2>
+      <p>Vår passion är att skapa banbrytande lösningar som omdefinierar hur världen interagerar med teknologi. Vi kombinerar kreativitet och expertis för att leverera de bästa tekniska lösningarna.</p>
+      <button class="cta-button">Kom igång</button>
+    </div>
+  </section>
+
+  <section class="ecommerce-section">
+    <div class="ecommerce-container">
+      <div class="image-side">
+        <img src="techpictures/Kreativitet1.png" alt="E-handel bild">
+      </div>
+      <div class="text-side">
+        <span class="label">TJÄNST</span>
+        <h1 class="headline">E-handel</h1>
+        <p class="description">
+          Vi är specialister på att skapa effektiva, integrerade och automatiserade webbshoppar.
+        </p>
+        <a href="#kontakt" class="cta-button">Gå till E-handel</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="extra-section" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Har du frågor eller vill du samarbeta med oss? Tveka inte att ta kontakt med vårt team för att få veta mer.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tech Startup. Alla rättigheter förbehållna.</p>
+  </footer>
+
+</body>
+</html>

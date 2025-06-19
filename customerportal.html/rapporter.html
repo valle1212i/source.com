@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rapporter – Kundportal</title>
+  <link rel="stylesheet" href="rapporter.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="customerportal.html">
+        <img src="Customerportalimage/Sesede.png" alt="Logotyp" />
+      </a>
+    </div>
+    <div class="menu-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-content" id="menuContent">
+        <a href="contact.html">📞 Kontakt</a>
+        <a href="rapporter.html">📊 Rapporter</a>
+        <a href="Fakturor.html">📄 Fakturor</a>
+        <a href="kunder.html">💬 Kunder</a>
+        <a href="inventarier.html">📦 Inventarier</a>
+        <a href="#">⚙️ Inställningar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="reports-container">
+    <h1>Utbetalningsrapporter</h1>
+
+    <div class="report-entry">
+      <h3>🗓️ 12 maj 2025</h3>
+      <p><strong>Totalt:</strong> 8 450 kr</p>
+      <div class="report-actions">
+        <a href="#" class="view-details">Visa detaljer</a>
+        <a href="#" class="download-btn">Ladda ner PDF</a>
+      </div>
+    </div>
+
+    <div class="report-entry">
+      <h3>🗓️ 11 maj 2025</h3>
+      <p><strong>Totalt:</strong> 12 300 kr</p>
+      <div class="report-actions">
+        <a href="#" class="view-details">Visa detaljer</a>
+        <a href="#" class="download-btn">Ladda ner PDF</a>
+      </div>
+    </div>
+
+    <div class="report-entry">
+      <h3>🗓️ 10 maj 2025</h3>
+      <p><strong>Totalt:</strong> 6 750 kr</p>
+      <div class="report-actions">
+        <a href="#" class="view-details">Visa detaljer</a>
+        <a href="#" class="download-btn">Ladda ner PDF</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menuContent").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* ====================
+   Global styles
+==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ====================
+   Header section
+==================== */
+header {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 3s ease-out;
+    border-bottom: 2px solid #fff;
+}
+
+header h1 {
+    font-size: 4em;
+    letter-spacing: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-out;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 3s ease-out 1s forwards;
+    color: #e4e4e4;
+}
+
+/* ====================
+   Main section
+==================== */
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    animation: slideUp 2s ease-out;
+    padding: 0 20px;
+}
+
+.content {
+    text-align: center;
+    animation: fadeIn 2s ease-out 2s forwards;
+}
+
+.content h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: bounceIn 1.5s ease-out;
+    color: #00d2ff;
+}
+
+.content p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #bdbdbd;
+}
+
+/* ====================
+   Vår teknologi – vänsterställd rubrik
+==================== */
+.tech-section {
+    padding: 60px 20px;
+    background-color: #181818;
+}
+
+.tech-section h2 {
+    font-size: 2.5em;
+    color: #00bfa6;
+    text-align: left;
+    margin-left: 20px;
+    animation: slideIn 1.2s ease-out;
+}
+
+/* ====================
+   E-handel Sektion (bild + text sida vid sida)
+==================== */
+.ecommerce-section {
+    background-color: #f7f7f7;
+    color: #121212;
+    padding: 80px 20px;
+  }
+  
+  .ecommerce-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: nowrap;
+  }
+  
+  .image-side {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .image-side img {
+    width: 100%;
+    max-height: 400px; /* Begränsar bildens höjd */
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  .text-side {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .text-side .label {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .text-side .headline {
+    font-size: 2.8em;
+    margin: 0 0 15px;
+    font-weight: 600;
+  }
+  
+  .text-side .description {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .text-side .cta-button {
+    background-color: #00d2ff;
+    color: #121212;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: inline-block;
+  }
+  
+  .text-side .cta-button:hover {
+    background-color: #00a8cc;
+  }
+  @media (max-width: 768px) {
+    .ecommerce-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-side, .text-side {
+      max-width: 100%;
+    }
+  
+    .text-side .headline {
+      font-size: 2.2em;
+    }
+  
+    .text-side .description {
+      font-size: 1em;
+    }
+  
+    .image-side img {
+      max-height: 250px;
+    }
+  }
+  
+
+/* ====================
+   Call to Action Button
+==================== */
+.cta-button {
+    padding: 15px 30px;
+    background: #00d2ff;
+    color: #121212;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 15px rgba(0, 210, 255, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #3a7bd5;
+    box-shadow: 0px 8px 20px rgba(0, 210, 255, 0.6);
+}
+
+/* ====================
+   Footer
+==================== */
+footer {
+    background-color: #121212;
+    color: #e4e4e4;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    border-top: 2px solid #fff;
+    animation: fadeIn 2s ease-out 3s forwards;
+}
+
+/* ====================
+   Animations
+==================== */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: translateY(-100px); }
+    50% { transform: translateY(25px); }
+    100% { transform: translateY(0); }
+}
+
+/* ====================
+   Responsive Design
+==================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .content h2 {
+        font-size: 2.2em;
+    }
+
+    .content p {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+
+    .tech-section h2 {
+        font-size: 2em;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .ecommerce-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-side .headline {
+        font-size: 2.2em;
+    }
+
+    .text-side .description {
+        font-size: 1em;
+    }
+
+    .image-side img {
+        border-radius: 8px;
+    }
+}

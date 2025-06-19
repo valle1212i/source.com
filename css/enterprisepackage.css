@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header Section */
+.header {
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Navigation Menu */
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #00bfa6;
+}
+
+/* Call to Action Buttons */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.cta-buttons .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #00bfa6;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #00997d;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #00bfa6;
+    color: #00bfa6;
+}
+
+.btn-secondary:hover {
+    background-color: #00bfa6;
+    color: #ffffff;
+}
+
+/* Enterprise Package Section */
+.enterprise-package {
+    padding: 60px 20px;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+.enterprise-details {
+    background-color: #2a2a2a;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.pricing-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    color: #00bfa6;
+    margin-bottom: 20px;
+}
+
+.pricing-features {
+    list-style-type: none;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.pricing-features li {
+    font-size: 1rem;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+}
+
+.package-description {
+    font-size: 1rem;
+    color: #d1d1d1;
+    margin-bottom: 30px;
+}
+
+.call-to-action {
+    padding: 60px 20px;
+    background-color: #333333;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    margin-bottom: 30px;
+}
+
+.cta-contact {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+.cta-contact a {
+    color: #00bfa6;
+    text-decoration: none;
+}
+
+.cta-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    color: #d1d1d1;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

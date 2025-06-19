@@ -1,0 +1,65 @@
+.header img {
+  height: 100px; /* ökar storleken med 40 % från t.ex. 60px */
+}
+
+/* Extra sektioner */
+.growth-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.growth-card h2 {
+  color: #00bfa6;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.growth-info,
+.growth-usecases {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.93);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.growth-info h2,
+.growth-usecases h2 {
+  color: #00bfa6;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.growth-info ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.growth-info li {
+  margin-bottom: 12px;
+  color: #222;
+  font-size: 1.05rem;
+}
+
+.growth-usecases p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Sista CTA */
+.bottom-cta {
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.bottom-cta h2 {
+  font-size: 1.8rem;
+  color: #00bfa6;
+  margin-bottom: 20px;
+}

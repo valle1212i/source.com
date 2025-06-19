@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growth Package – Source</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('Images/Bakground Avanza vibe.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+    }
+
+    .header {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header img {
+      height: 60px;
+    }
+
+    .nav a {
+      color: #f0f0f0;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #00d991;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .growth-card, .growth-info, .growth-usecases {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      color: #00bfa6;
+      margin-bottom: 15px;
+    }
+
+    .features, .growth-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .features li, .growth-info li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .features li::before, .growth-info li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #00bfa6;
+    }
+
+    .growth-usecases p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background-color: #00d991;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #00b57d;
+    }
+
+    .bottom-cta {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .bottom-cta h2 {
+      font-size: 1.8rem;
+      color: #00bfa6;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .intro-text {
+        font-size: 1rem;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .header {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html">
+      <img src="pricingimages/Source (kopia).png" alt="Source Logotyp" />
+    </a>
+    <nav class="nav">
+      <a href="pricing.html">Hem</a>
+      <a href="services.html">Tjänster</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Growth Package</h1>
+    <p class="intro-text">
+      För växande företag som behöver en kraftfull och trovärdig digital närvaro. Paketet passar perfekt för företag som vuxit ur en enkel webbplats och nu behöver fler sidor, bättre struktur och optimering för att synas och konvertera.
+    </p>
+
+    <div class="growth-card">
+      <h2>Det här får du:</h2>
+      <ul class="features">
+        <li>Professionell och responsiv webbdesign</li>
+        <li>Upp till 15 välplanerade sidor (t.ex. tjänster, om oss, blogg, referenser)</li>
+        <li>SEO-optimering för Google (on-page)</li>
+        <li>Månadsunderhåll (backup, säkerhet, uppdateringar)</li>
+        <li>Prioriterad e-postsupport inom 24h</li>
+      </ul>
+      <a href="kontakt.html" class="btn-primary">Be om offert</a>
+    </div>
+
+    <section class="growth-info">
+      <h2>Passar dig som...</h2>
+      <ul>
+        <li>Driver ett växande företag och vill uppdatera din befintliga hemsida</li>
+        <li>Vill ha en solid grund för framtida digital marknadsföring</li>
+        <li>Behöver en proffsig webbplats att visa upp för kunder, investerare eller partners</li>
+      </ul>
+    </section>
+
+    <section class="growth-usecases">
+      <h2>Vanliga användningsområden</h2>
+      <p>Growth-paketet är populärt bland konsulter, byråer, byggföretag, hälsobranschen, e-tjänsteleverantörer och många fler.</p>
+    </section>
+
+    <div class="bottom-cta">
+      <h2>Redo att ta nästa steg?</h2>
+      <a href="kontakt.html" class="btn-primary">Kontakta oss för en kostnadsfri konsultation</a>
+    </div>
+  </main>
+</body>
+</html>

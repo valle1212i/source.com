@@ -1,0 +1,184 @@
+/* Fonts & Reset */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+  color: #007b7b;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 10px 0; /* Kortare höjd */
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logotyp centrerad */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.logo {
+  height: 140px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation under logga */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li a {
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav li a:hover {
+  background-color: #005757;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background-image: url('hotellimages/Bakgrundsbilden.png.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #005757;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* Sections */
+.section {
+  padding: 60px 10px;
+}
+
+.section.alt {
+  background-color: #f4f4f4;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.split.reverse {
+  flex-direction: row-reverse;
+}
+
+.split img {
+  flex: 1;
+  max-width: 500px;  /* Begränsa storlek */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.split div {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+/* Specifik stil för spabild1 */
+.spabild {
+  flex: 1;
+  max-width: 400px;
+  min-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+

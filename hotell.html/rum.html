@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rum – Havspa Hotel</title>
+  <link rel="stylesheet" href="hotell.css" />
+  <style>
+    /* Videohero */
+    .video-hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .video-hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    /* Gör så att header är ovanpå videon */
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="hotellimages/havsspsa.png" alt="Havspa Hotel logotyp" class="logo">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="hotell.html">Start</a></li>
+          <li><a href="rum.html">Rum</a></li>
+          <li><a href="spa.html">Spa</a></li>
+          <li><a href="#">Restaurang</a></li>
+          <li><a href="#">Erbjudanden</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- VIDEOHERO -->
+  <section class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="hotellimages/videoroom.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Våra Rum</h1>
+      <p>Elegant komfort med havsutsikt – för din perfekta vistelse.</p>
+    </div>
+  </section>
+
+  <!-- INNEHÅLL -->
+  <section class="section">
+    <div class="container split">
+      <img src="hotellimages/hotellrum1.png" alt="Dubbelrum">
+      <div>
+        <h2>Dubbelrum</h2>
+        <p>Perfekt för två personer, med bekväm dubbelsäng, badrum och balkong med havsutsikt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container split reverse">
+      <img src="hotellimages/hotellrum2.png" alt="Svit">
+      <div>
+        <h2>Lyxsvit</h2>
+        <p>Vår mest exklusiva svit – med lounge, jacuzzi och panoramautsikt över havet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2024 Havspa Hotel – Alla rättigheter förbehållna.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fakturor – Kundportal</title>
+  <link rel="stylesheet" href="fakturor.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <a href="customerportal.html">
+        <img src="Customerportalimage/Sesede.png" alt="Source logo" class="logo">
+      </a>
+    </div>
+    <div class="menu-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-content" id="menuContent">
+        <a href="kontakt.html">📞 Kontakt</a>
+        <a href="rapporter.html">📊 Rapporter</a>
+        <a href="fakturor.html">📄 Fakturor</a>
+        <a href="kunder.html">💬 Kunder</a>
+        <a href="inventarier.html">📦 Inventarier</a>
+        <a href="inställningar.html">⚙️ Inställningar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="intro">
+    <h1>Fakturor</h1>
+    <p class="subtitle">Granska dina fakturor, spåra betalningsstatus och hämta dokument.</p>
+  </section>
+
+  <main class="invoice-dashboard">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab" onclick="toggleTab('unpaid')">Obetalda</button>
+      <button class="tab active" onclick="toggleTab('paid')">Betalda</button>
+    </div>
+
+    <!-- Obetalda -->
+    <table class="invoice-table hidden" id="unpaid">
+      <thead>
+        <tr>
+          <th>Faktura</th>
+          <th>Förfallodatum</th>
+          <th>Belopp</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PINV-0012</td><td>2024-05-25</td><td>900,00 kr</td><td><span class="status delayed">Försenad</span></td></tr>
+        <tr><td>PINV-0011</td><td>2024-05-20</td><td>760,00 kr</td><td><span class="status overdue">Förfallen</span></td></tr>
+      </tbody>
+    </table>
+
+    <!-- Betalda -->
+    <table class="invoice-table" id="paid">
+      <thead>
+        <tr>
+          <th>Faktura</th>
+          <th>Betaldatum</th>
+          <th>Belopp</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PINV-0010</td><td>2024-05-10</td><td>820,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0009</td><td>2024-05-09</td><td>780,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0008</td><td>2024-05-08</td><td>740,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0007</td><td>2024-05-07</td><td>720,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0006</td><td>2024-05-06</td><td>690,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0005</td><td>2024-05-05</td><td>660,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0004</td><td>2024-05-04</td><td>630,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0003</td><td>2024-05-03</td><td>610,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0002</td><td>2024-05-02</td><td>580,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0001</td><td>2024-05-01</td><td>540,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+        <tr><td>PINV-0000</td><td>2024-04-30</td><td>500,00 kr</td><td><span class="status paid">Betald</span></td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Script -->
+  <script>
+    function toggleTab(tab) {
+      document.getElementById('unpaid').classList.add('hidden');
+      document.getElementById('paid').classList.add('hidden');
+      document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tab).classList.remove('hidden');
+      document.querySelector(`.tab[onclick="toggleTab('${tab}')"]`).classList.add('active');
+    }
+
+    function toggleMenu() {
+      document.getElementById("menuContent").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Reset & bas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('Images/Bakground%20Avanza%20vibe.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: #111;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header img {
+  height: 100px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav a:hover {
+  color: #00d991;
+}
+
+/* Hero/title */
+.enterprise-package {
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+.enterprise-package h1 {
+  font-size: 3rem;
+  color: #00d991;
+  margin-bottom: 20px;
+}
+
+.enterprise-package p {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+/* Innehållsruta */
+.enterprise-details {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.enterprise-details h2 {
+  font-size: 1.5rem;
+  color: #00b57d;
+  margin-bottom: 20px;
+}
+
+.enterprise-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.enterprise-details li {
+  padding-left: 24px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.enterprise-details li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00d991;
+  font-weight: bold;
+}
+
+/* Call-to-action */
+.cta-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta-section h2 {
+  font-size: 1.8rem;
+  color: #00bfa6;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #00d991;
+  color: #000;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00b57d;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+  .enterprise-package h1 {
+    font-size: 2.3rem;
+  }
+
+  .enterprise-package p {
+    font-size: 1rem;
+  }
+
+  .enterprise-details {
+    padding: 30px 20px;
+    margin: 20px 15px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+  }
+}

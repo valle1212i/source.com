@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Georgia', serif;
+    background-color: #f5d600;
+    color: #111;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .info {
+    flex: 1 1 45%;
+  }
+  
+  .donate-list {
+    flex: 1 1 45%;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  ul {
+    list-style: square;
+    padding-left: 20px;
+  }
+  
+  footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  a {
+    color: #111;
+    text-decoration: underline;
+  }
+  

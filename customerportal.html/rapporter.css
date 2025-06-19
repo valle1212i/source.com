@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.logo-container img {
+  width: 120px;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  display: block;
+}
+
+.menu-content {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.menu-content.active {
+  display: flex;
+}
+
+.menu-content a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-content a:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* MAIN CONTAINER */
+.reports-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.reports-container h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  border-left: 5px solid #00bfa6;
+  padding-left: 15px;
+}
+
+/* INDIVIDUELLA RAPPORTER */
+.report-entry {
+  background: #f9f9f9;
+  border-left: 4px solid #00bfa6;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.report-entry:hover {
+  transform: translateY(-3px);
+  background-color: #f1fefc;
+}
+
+.report-entry h3 {
+  font-size: 1.1rem;
+  color: #00bfa6;
+  margin-bottom: 10px;
+}
+
+.report-entry p {
+  margin-bottom: 10px;
+}
+
+/* ACTION KNAPPAR */
+.report-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-details, .download-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-details {
+  background-color: #00bfa6;
+  color: #fff;
+}
+
+.view-details:hover {
+  background-color: #009e89;
+}
+
+.download-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+.download-btn:hover {
+  background-color: #222;
+}
+
+/* RESPONSIV */
+@media (max-width: 768px) {
+  .reports-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .report-actions {
+    flex-direction: column;
+  }
+}

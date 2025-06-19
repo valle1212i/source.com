@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skapa din hemsida</title>
+  <link rel="stylesheet" href="css/trywithme.css" />
+</head>
+<body>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h1>Skapa din framtida hemsida</h1>
+      <p class="description">Svara på några korta frågor – så får du direkt en visuell prototyp.</p>
+
+      <form id="prototypeForm" class="prototype-form">
+        <input type="text" name="product" placeholder="Vad säljer du?" required />
+        <input type="text" name="style" placeholder="Vilken stil gillar du?" required />
+        <input type="text" name="features" placeholder="Vilka funktioner behöver du?" required />
+        <input type="text" name="audience" placeholder="Vilken målgrupp har du?" required />
+        <input type="text" name="branding" placeholder="Färger eller logga?" required />
+        <button type="submit" class="btn-submit">Generera prototyp</button>
+      </form>
+
+      <div id="result" class="result-preview"></div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById("prototypeForm");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const content = `
+        <div class="preview-box">
+          <h2>${data.get("product")}</h2>
+          <p><strong>Stil:</strong> ${data.get("style")}</p>
+          <p><strong>Funktioner:</strong> ${data.get("features")}</p>
+          <p><strong>Målgrupp:</strong> ${data.get("audience")}</p>
+          <p><strong>Branding:</strong> ${data.get("branding")}</p>
+        </div>
+      `;
+      result.innerHTML = content;
+    });
+    form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = {
+    product: form.product.value,
+    style: form.style.value,
+    features: form.features.value,
+    audience: form.audience.value,
+    branding: form.branding.value,
+  };
+
+  result.innerHTML = "Genererar hemsida...";
+
+  const res = await fetch('http://localhost:3001/generate-site', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+
+  const responseData = await res.json();
+
+  result.innerHTML = `
+    <iframe style="width: 100%; height: 600px; border: none; margin-top: 40px;"
+            srcdoc="${responseData.code.replace(/"/g, '&quot;')}">
+    </iframe>
+  `;
+});
+
+  </script>
+
+</body>
+</html>

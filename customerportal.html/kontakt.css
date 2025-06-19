@@ -1,0 +1,150 @@
+/* === Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* === Body === */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+  }
+  
+  /* === Header === */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+  
+  /* === Logo === */
+  .logo-container img {
+    height: 100px;
+    width: auto;
+  }
+  
+  /* === Menu Toggle (Hamburger) === */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  /* === Menu Content === */
+  .menu-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background: white;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .menu-content.show {
+    display: block;
+  }
+  
+  .menu-content a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  
+  .menu-content a:hover {
+    color: #00bfa6;
+  }
+  
+  /* === Main Contact Page === */
+  .contact-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .contact-page h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+  }
+  
+  .contact-section {
+    margin-bottom: 30px;
+  }
+  
+  .contact-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .contact-section p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .contact-section a {
+    color: #0077cc;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  .contact-section a:hover {
+    color: #00bfa6;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #00bfa6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #009e8a;
+  }
+  
+  .phone-number a {
+    font-size: 1.1rem;
+  }
+  
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  details p {
+    margin-top: 5px;
+    padding-left: 10px;
+    color: #444;
+  }
+  
